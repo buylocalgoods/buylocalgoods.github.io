@@ -36,20 +36,22 @@
     "siteFonts": [],
     "favicon": "",
     "": "on",
-    "robotsSwitcher": false,
-    "sitemapSwitcher": false,
-    "sitemapSwitcherAuto": false,
-    "siteUrl": "undefined",
+    "robotsSwitcher": true,
+    "sitemapSwitcher": true,
+    "sitemapSwitcherAuto": true,
+    "siteUrl": "https://buylocalgoods.ca",
     "uniqCompNum": 22,
     "versionPublish": "4.11.2",
-    "screenshot": "screenshot.png"
+    "screenshot": "screenshot.png",
+    "robotsText": "User-agent: *\nDisallow: /cgi-bin\nSitemap: https://buylocalgoods.ca/sitemap.xml",
+    "google-analytics": "<!-- Global site tag (gtag.js) - Google Analytics -->\n<script async src=\"https://www.googletagmanager.com/gtag/js?id=UA-166141094-1\"></script>\n<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag('js', new Date());\n\n  gtag('config', 'UA-166141094-1');\n</script>\n\n"
   },
   "pages": {
     "index.html": {
       "settings": {
         "main": true,
-        "title": "Buy",
-        "meta_descr": "",
+        "title": "Buy local goods in Quebec",
+        "meta_descr": "Make local shopping and tourism. Small local businesses in Quebec that provide delivery or pick up service.",
         "header_custom": "",
         "footer_custom": "",
         "html_before": ""
