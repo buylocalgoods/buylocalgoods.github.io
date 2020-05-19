@@ -40,7 +40,7 @@
     "sitemapSwitcher": true,
     "sitemapSwitcherAuto": true,
     "siteUrl": "https://buylocalgoods.ca",
-    "uniqCompNum": 22,
+    "uniqCompNum": 23,
     "versionPublish": "4.11.2",
     "screenshot": "screenshot.png",
     "robotsText": "User-agent: *\nDisallow: /cgi-bin\nSitemap: https://buylocalgoods.ca/sitemap.xml",
@@ -312,6 +312,102 @@
           "_global": false,
           "_once": false,
           "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value",
+              ".mbr-overlay when (@twoBgColor)": {
+                "padding": "0",
+                "background": "@twoColor",
+                "opacity": "1"
+              }
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)",
+              ".mbr-overlay": {
+                "background": "@overlayColor",
+                "opacity": "@overlayOpacity"
+              }
+            },
+            ".progressbar": {
+              ".progressbar-wrap": {
+                "height": "10px",
+                "background-color": "#e3e3e3",
+                "background-image": "linear-gradient(135deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent)",
+                "background-size": "15px 15px",
+                ".progress": {
+                  "height": "100%",
+                  "border-radius": "0",
+                  "background": "@progressColor"
+                }
+              },
+              "&.progress1": {
+                ".progress": {
+                  "width": "~\"@{progress1}%\""
+                },
+                ".progress_value:before": {
+                  "content": "\"@{progress1}\""
+                }
+              },
+              "&.progress2 when (@progressCount > 1)": {
+                ".progress": {
+                  "width": "~\"@{progress2}%\""
+                },
+                ".progress_value:before": {
+                  "content": "\"@{progress2}\""
+                }
+              },
+              "&.progress3 when (@progressCount > 2)": {
+                ".progress": {
+                  "width": "~\"@{progress3}%\""
+                },
+                ".progress_value:before": {
+                  "content": "\"@{progress3}\""
+                }
+              },
+              "&.progress4 when (@progressCount > 3)": {
+                ".progress": {
+                  "width": "~\"@{progress4}%\""
+                },
+                ".progress_value:before": {
+                  "content": "\"@{progress4}\""
+                }
+              },
+              "&.progress5 when (@progressCount > 4)": {
+                ".progress": {
+                  "width": "~\"@{progress5}%\""
+                },
+                ".progress_value:before": {
+                  "content": "\"@{progress5}\""
+                }
+              },
+              "&.progress6 when (@progressCount > 5)": {
+                ".progress": {
+                  "width": "~\"@{progress6}%\""
+                },
+                ".progress_value:before": {
+                  "content": "\"@{progress6}\""
+                }
+              },
+              ".title-progressbar-wrap": {
+                "padding-bottom": "6px",
+                "align-items": "center",
+                "justify-content": "space-between"
+              }
+            }
+          },
+          "_name": "progress-bars01",
+          "_customHTML": "<section class=\"progress-bars1\" group=\"Progress Bars\" plugins=\"amp-main\">\n\n    <mbr-parameters>\n        <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"1\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"2\">\n        <input type=\"range\" inline title=\"Progress Width\" name=\"progressWidth\" min=\"1\" max=\"6\" step=\"1\" value=\"6\">\n\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Subtitle\" name=\"showSubtitle\" checked>\n        <select title=\"Align\" name=\"titleAlign\" condition=\"showTitle || showSubtitle\">\n            <option value=\"1\" selected>Left</option>\n            <option value=\"2\">Center</option>\n            <option value=\"3\">Right</option>\n        </select>\n        <header>Progress bars</header>\n        <input type=\"color\" title=\"Progress Color\" name=\"progressColor\" value=\"#b79b6c\">\n\n        <input type=\"range\" inline title=\"Progress count\" name=\"progressCount\" min=\"1\" max=\"6\" step=\"1\" value=\"1\">\n\n        <input type=\"range\" inline title=\"Progress 1\" name=\"progress1\" min=\"0\" max=\"100\" step=\"1\" value=\"46\">\n        <input type=\"range\" inline title=\"Progress 2\" name=\"progress2\" min=\"0\" max=\"100\" step=\"1\" value=\"64\" condition=\"progressCount>1\">\n        <input type=\"range\" inline title=\"Progress 3\" name=\"progress3\" min=\"0\" max=\"100\" step=\"1\" value=\"70\" condition=\"progressCount>2\">\n        <input type=\"range\" inline title=\"Progress 4\" name=\"progress4\" min=\"0\" max=\"100\" step=\"1\" value=\"63\" condition=\"progressCount>3\">\n        <input type=\"range\" inline title=\"Progress 5\" name=\"progress5\" min=\"0\" max=\"100\" step=\"1\" value=\"87\" condition=\"progressCount>4\">\n        <input type=\"range\" inline title=\"Progress 6\" name=\"progress6\" min=\"0\" max=\"100\" step=\"1\" value=\"95\" condition=\"progressCount>5\">\n\n        <header>Background</header>\n        <input type=\"checkbox\" title=\"2 Background Color\" name=\"twoBgColor\" condition=\"bg.type == 'color'\">\n        <input type=\"range\" inline title=\"Width 2 Bg\" name=\"width2Bg\" min=\"1\" max=\"5\" step=\"1\" value=\"4\" condition=\"twoBgColor && bg.type == 'color'\">\n        <fieldset type=\"background\" name=\"bg\">\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background5.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#ffffff\" selected>\n        </fieldset>\n        <input type=\"color\" title=\"2 Color\" name=\"twoColor\" value=\"#f4f5f7\" condition=\"twoBgColor && bg.type == 'color'\">\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" condition=\"overlay && bg.type !== 'color'\">\n        <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"(overlay && bg.type !== 'color') || (twoBgColor && bg.type == 'color')\" mbr-class=\"{'mbr-col-md-4': width2Bg == 1 && twoBgColor && bg.type == 'color',\n                     'mbr-col-md-5': width2Bg == 2 && twoBgColor && bg.type == 'color',\n                     'mbr-col-md-6': width2Bg == 3 && twoBgColor && bg.type == 'color',\n                     'mbr-col-md-7': width2Bg == 4 && twoBgColor && bg.type == 'color',\n                     'mbr-col-md-8': width2Bg == 5 && twoBgColor && bg.type == 'color'}\"></div>\n    <div mbr-class=\"{'container':!fullWidth,\n                     'container-fluid':fullWidth}\">\n        <div class=\"title-wrap mbr-pb-5\" mbr-if=\"showTitle || showSubtitle\" mbr-class=\"{'mbr-px-2': fullWidth,'align-left': titleAlign == 1, 'align-center': titleAlign == 2, 'align-right': titleAlign == 3}\">\n            <h2 class=\"mbr-section-title mbr-fonts-style mbr-semibold\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".title-wrap .mbr-section-title\">Discover local products and destinations around you!<br></h2>\n            <h3 class=\"mbr-section-subtitle mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showSubtitle\" data-app-selector=\".title-wrap .mbr-section-subtitle\"><br>These days buying from local producers means so much! Discover locally made artisanal products in Quebec. Looking for the best gift, fresh local farm food or new travel destinations nearby? With BuyLocalGoods, we bring every effort into making local purchasing more accessible. Let’s build a better world together! Help us to elaborate a full list of small and midsized businesses in Quebec that provide delivery or pick up services. We welcome eco-friendly, responsable and sustainable producers in Quebec. Please feel free to contact us and add your favorite local business to our project. Organic, vegan, zero waste producers: we are looking for you to promote your business!</h3>\n        </div>\n\n        <div class=\"mbr-row mbr-jc-c\" mbr-class=\"{'mbr-px-2': fullWidth}\">\n\n            <div class=\"progress_elements mbr-col-sm-12 mbr-col-md-12\" mbr-class=\"{'mbr-col-lg-5': progressWidth == 1, 'mbr-col-lg-6': progressWidth == 2, 'mbr-col-lg-7': progressWidth == 3,'mbr-col-lg-8': progressWidth == 4, 'mbr-col-lg-10': progressWidth == 5, 'mbr-col-lg-12': progressWidth == 6}\">\n                <div class=\"mbr-row mbr-jc-c\">\n                    <div class=\"mbr-col-lg-6 mbr-col-md-12 mbr-col-sm-12\">\n                        <div class=\"progress1 progressbar\" mbr-class=\"{'last-child': progressCount == 1, 'mbr-pb-4': progressCount > 1}\">\n                            <div class=\"title-progressbar-wrap mbr-flex\">\n                                <p class=\"progressbar-title mbr-fonts-style mbr-bold\" mbr-theme-style=\"display-4\" data-app-selector=\".title-progressbar-wrap .progressbar-title\">Small businesses</p>\n                                <p class=\"progress_value mbr-fonts-style mbr-bold\" mbr-theme-style=\"display-4\" data-app-selector=\".progress_value\"></p>\n                            </div>\n                            <div class=\"progressbar-wrap\">\n                                <div class=\"progress\"></div>\n                            </div>\n                        </div>\n\n                        <div class=\"progress2 progressbar\" mbr-if=\"progressCount > 1\" mbr-class=\"{'last-child': progressCount == 2, 'mbr-pb-4': progressCount > 2}\">\n                            <div class=\"title-progressbar-wrap mbr-flex\">\n                                <p class=\"progressbar-title mbr-fonts-style mbr-bold\" mbr-theme-style=\"display-4\" data-app-selector=\".title-progressbar-wrap .progressbar-title\">\n                                    Free returns</p>\n                                <p class=\"progress_value mbr-fonts-style mbr-bold\" mbr-theme-style=\"display-4\" data-app-selector=\".progress_value\">%</p>\n                            </div>\n                            <div class=\"progressbar-wrap\">\n                                <div class=\"progress\"></div>\n                            </div>\n                        </div>\n\n                        <div class=\"progress3 progressbar\" mbr-if=\"progressCount > 2\" mbr-class=\"{'last-child': progressCount == 3, 'mbr-pb-4': progressCount > 3}\">\n                            <div class=\"title-progressbar-wrap mbr-flex\">\n                                <p class=\"progressbar-title mbr-fonts-style mbr-bold\" mbr-theme-style=\"display-4\" data-app-selector=\".title-progressbar-wrap .progressbar-title\">\n                                    Customer service</p>\n                                <p class=\"progress_value mbr-fonts-style mbr-bold\" mbr-theme-style=\"display-4\" data-app-selector=\".progress_value\">%</p>\n                            </div>\n                            <div class=\"progressbar-wrap\">\n                                <div class=\"progress\"></div>\n                            </div>\n                        </div>\n                    </div>\n\n                    <div class=\"mbr-col-lg-6 mbr-col-md-12 mbr-col-sm-12\" mbr-if=\"progressCount > 3\">\n\n\n                        <div class=\"progress4 progressbar\" mbr-if=\"progressCount > 3\" mbr-class=\"{'last-child': progressCount == 4, 'mbr-pb-4': progressCount > 4}\">\n                            <div class=\"title-progressbar-wrap mbr-flex\">\n                                <p class=\"progressbar-title mbr-fonts-style mbr-bold\" mbr-theme-style=\"display-4\" data-app-selector=\".title-progressbar-wrap .progressbar-title\">\n                                    Secured payments</p>\n                                <p class=\"progress_value mbr-fonts-style mbr-bold\" mbr-theme-style=\"display-4\" data-app-selector=\".progress_value\">%</p>\n                            </div>\n                            <div class=\"progressbar-wrap\">\n                                <div class=\"progress\"></div>\n                            </div>\n                        </div>\n\n                        <div class=\"progress5 progressbar\" mbr-if=\"progressCount > 4\" mbr-class=\"{'last-child': progressCount == 5, 'mbr-pb-4': progressCount > 5}\">\n                            <div class=\"title-progressbar-wrap mbr-flex\">\n                                <p class=\"progressbar-title mbr-fonts-style mbr-bold\" mbr-theme-style=\"display-4\" data-app-selector=\".title-progressbar-wrap .progressbar-title\">Variety of assortment\n                                </p>\n                                <p class=\"progress_value mbr-fonts-style mbr-bold\" mbr-theme-style=\"display-4\" data-app-selector=\".progress_value\">%</p>\n                            </div>\n                            <div class=\"progressbar-wrap\">\n                                <div class=\"progress\"></div>\n                            </div>\n                        </div>\n\n                        <div class=\"progress6 progressbar\" mbr-if=\"progressCount > 5\" mbr-class=\"{'last-child': progressCount == 6}\">\n                            <div class=\"title-progressbar-wrap mbr-flex\">\n                                <p class=\"progressbar-title mbr-fonts-style mbr-bold\" mbr-theme-style=\"display-4\" data-app-selector=\".title-progressbar-wrap .progressbar-title\">Product quality</p>\n                                <p class=\"progress_value mbr-fonts-style mbr-bold\" mbr-theme-style=\"display-4\" data-app-selector=\".progress_value\">%</p>\n                            </div>\n                            <div class=\"progressbar-wrap\">\n                                <div class=\"progress\"></div>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "rZrUs1d7nJ",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "progress-bars01-m"
         },
         {
           "alias": false,
