@@ -63,16 +63,19 @@ body{font-family: Heebo;}blockquote{border-color: #33363b;}div[submit-success] >
 	</amp-sidebar>
 
 <!-- Analytics -->
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-166141094-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-166141094-1');
+<script async="" custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+<amp-analytics type="gtag" data-credentials="include">
+<script type="application/json">
+{
+  "vars" : {
+    "gtag_id": "UA-166141094-1",
+    "config" : {
+      "UA-166141094-1": { "groups": "default" }
+    }
+  }
+}
 </script>
-
+</amp-analytics>
 
 <!-- /Analytics -->
 
@@ -1765,7 +1768,7 @@ body{font-family: Heebo;}blockquote{border-color: #33363b;}div[submit-success] >
 
 
                 <div class="mbr-col-lg-12 mbr-form" data-form-type="formoid">
-                    <form method="POST" class="mbr-form" action-xhr="https://formoid.net/api/amp-form/push" data-form-title="Form Name"><input type="hidden" name="email" data-form-email="true" value="I5ObGR4Q5MTTlTu2zv936z78kPuscJnSo/WulQTqYKoJI/8A2a3QNipENCkhBrkj8sgcw1oAfR4DamE/RbHG8Dyiqv0+r75bE+eLdJ+nVd6rLZWN5ItIimSO5kSJ5JPS.peo7B7NGyorMgzwcj4m5Iay264nrpOogV5xu/GdkqW9yRp0s4klKR1BDc0V4owougZeMPzzF3C5PkdGw/XhgOZlzJpz0/v5q6QlkgC9c/9YUglzmnl4RPUVptNbe7ExT">
+                    <form method="POST" class="mbr-form" action-xhr="https://formoid.net/api/amp-form/push" data-form-title="Form Name"><input type="hidden" name="email" data-form-email="true" value="sdJ2faQ03WlA46t2gCoqfGN9ZRjXvdbEZcBT2z40M7o2ABofbfAx5uRUVPzA8scIvUjwPiUKKtIPF2JgF76/wbVX5t2e+svOLYAei5oFz2CFrBYsHjag0ugjvmCUfhgC.WbBdWpXx7Twd/GgFTZrnv1zHyoR25yyOR996gZ7uUQJyGJ753o2/N5V7wSJUstGZVMdvW7rEoNuKFytJGRrlEQShiNRdrW7RY1sUZOh1tLZ9ULn5CSpFcdmqerLUbxXs">
                         <div class="mbr-row">
                             <div submit-success="" class="mbr-col-lg-12 mbr-col-md-12 mbr-col-sm-12">
                                 <template data-form-alert="" type="amp-mustache">Thanks for filling out the

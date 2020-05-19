@@ -44,7 +44,7 @@
     "versionPublish": "4.11.2",
     "screenshot": "screenshot.png",
     "robotsText": "User-agent: *\nDisallow: /cgi-bin\nSitemap: https://buylocalgoods.ca/sitemap.xml",
-    "google-analytics": "<!-- Global site tag (gtag.js) - Google Analytics -->\n<script async src=\"https://www.googletagmanager.com/gtag/js?id=UA-166141094-1\"></script>\n<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag('js', new Date());\n\n  gtag('config', 'UA-166141094-1');\n</script>\n\n"
+    "google-analytics": "<script async custom-element=\"amp-analytics\" src=\"https://cdn.ampproject.org/v0/amp-analytics-0.1.js\"></script>\n<amp-analytics type=\"gtag\" data-credentials=\"include\">\n<script type=\"application/json\">\n{\n  \"vars\" : {\n    \"gtag_id\": \"UA-166141094-1\",\n    \"config\" : {\n      \"UA-166141094-1\": { \"groups\": \"default\" }\n    }\n  }\n}\n</script>\n</amp-analytics>\n"
   },
   "pages": {
     "index.html": {
