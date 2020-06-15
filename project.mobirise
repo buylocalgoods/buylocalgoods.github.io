@@ -1,6 +1,6 @@
 {
   "settings": {
-    "currentPage": "15-black-owned-beauty-and-fashion-brands-in-quebec.html",
+    "currentPage": "index.html",
     "theme": {
       "name": "depotamp",
       "title": "DepotAMP",
@@ -50,7 +50,7 @@
     "versionPublish": "4.12.3",
     "screenshot": "screenshot.png",
     "robotsText": "User-agent: *\nDisallow: /cgi-bin\nSitemap: https://buylocalgoods.ca/sitemap.xml",
-    "google-analytics": "<amp-analytics type=\"gtag\" data-credentials=\"include\">\n<script type=\"application/json\">\n{\n  \"vars\" : {\n    \"gtag_id\": \"UA-166141094-1\",\n    \"config\" : {\n      \"UA-166141094-1\": { \"groups\": \"default\" }\n    }\n  }\n}\n</script>\n</amp-analytics>\n",
+    "google-analytics": "<amp-analytics type=\"gtag\" data-credentials=\"include\">\n<script type=\"application/json\">\n{\n  \"vars\" : {\n    \"gtag_id\": \"UA-166141094-1\",\n    \"config\" : {\n      \"UA-166141094-1\": { \"groups\": \"default\" }\n    }\n  }\n}\n</script>\n</amp-analytics>\n\n<script type=\"application/ld+json\">\n  {\n    \"@context\" : \"http://schema.org\",\n    \"@type\" : \"Organization\",\n    \"name\" : \"buylocalgoods\",\n    \"url\" : \"https://buylocalgoods.ca/\",\n    \"sameAs\" : [\n     \"https://www.facebook.com/buylocalgoods/\",\n     \"https://www.instagram.com/buylocalgoods/\"\n     ]\n  }\n  </script>\n",
     "imageResize": true,
     "canonical-url": false,
     "cookiesAlert": false,
