@@ -53,7 +53,8 @@
     "google-analytics": "<amp-analytics type=\"gtag\" data-credentials=\"include\">\n<script type=\"application/json\">\n{\n  \"vars\" : {\n    \"gtag_id\": \"UA-166141094-1\",\n    \"config\" : {\n      \"UA-166141094-1\": { \"groups\": \"default\" }\n    }\n  }\n}\n</script>\n</amp-analytics>\n\n<script type=\"application/ld+json\">\n  {\n    \"@context\" : \"http://schema.org\",\n    \"@type\" : \"Organization\",\n    \"name\" : \"buylocalgoods\",\n    \"url\" : \"https://buylocalgoods.ca/\",\n    \"sameAs\" : [\n     \"https://www.facebook.com/buylocalgoods/\",\n     \"https://www.instagram.com/buylocalgoods/\"\n     ]\n  }\n  </script>\n",
     "imageResize": true,
     "cookiesAlert": false,
-    "gdpr": false
+    "gdpr": false,
+    "canonical-url": "https://buylocalgoods.ca/"
   },
   "pages": {
     "index.html": {
