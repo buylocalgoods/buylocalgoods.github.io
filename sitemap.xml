@@ -1,8 +1,5 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
-		<loc>https://buylocalgoods.ca/index.html</loc>
-	</url>
-	<url>
 		<loc>https://buylocalgoods.ca/buylocal.html</loc>
 	</url>
 	<url>
@@ -10,5 +7,11 @@
 	</url>
 	<url>
 		<loc>https://buylocalgoods.ca/12-microbreweries-to-visit-in-montreal-this-weekend.html</loc>
+	</url>
+	<url>
+		<loc>https://buylocalgoods.ca/fr.html</loc>
+	</url>
+	<url>
+		<loc>https://buylocalgoods.ca/index.html</loc>
 	</url>
 </urlset>
